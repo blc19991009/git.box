@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.js"></script>
+		<script type="text/javascript">
+			while (true) {
+				var month = +prompt('请输入您要买的票的月份1~12');
+				var lv = +prompt('请选择您要乘坐的舱型' + '\n' + '输入1为头等舱,输入2为经济舱');
+				if(month>=parseInt(1) && month<=parseInt(12) && (lv==1 || lv==2)){
+					break;
+				}else{
+					alert('输入错误重新输入')
+				}
+			}
+			var money = 4000;
+			if (month >= 4 && month <= 10) {
+				if (lv == 1) {
+					var money = money * 0.9;
+					alert('头等舱票价是' + money + '元')
+				} else if (lv == 2) {
+					var money = money * 0.75;
+					alert('经济舱票价是' + money + '元')
+				} else {
+					alert('错误')
+				}
+			} else {
+				if (lv == 1) {
+					var money = money * 0.6;
+					alert('头等舱票价是' + money + '元')
+				} else if (lv == 2) {
+					var money = money * 0.3;
+					alert('经济舱票价是' + money + '元')
+				} else {
+					alert('错误')
+				}
+			}
+		</script>
+	</body>
+
+</html>
